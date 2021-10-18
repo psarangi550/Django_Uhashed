@@ -21,7 +21,8 @@
                             <form action="  " method="post">
                                 {{form.as_p}}
                                 {% csrf_token %}
-                                <input type="submit" class="btn btn-success form-control " value="Login">
+                                <input type="submit" class="btn btn-success " value="Login">
+                                <a href="/accounts/password_reset/" class="btn btn-warning">Password Reset</a>
                             </form>
                         </div>
                     </div>
