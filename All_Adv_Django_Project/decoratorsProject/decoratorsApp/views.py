@@ -11,7 +11,7 @@ def user_profile(request):
 def user_about(request):
     return render(request,"registration/about.html")
 
-@permission_required("decoratorsApp.change_user",raise_exception=False)
+@permission_required("auth.can_change_user",raise_exception=False)
 def user_perms(request):
     return render(request,"registration/service.html")
 

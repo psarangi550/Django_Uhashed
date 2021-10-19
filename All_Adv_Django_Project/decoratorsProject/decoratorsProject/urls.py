@@ -24,6 +24,6 @@ urlpatterns = [
     path("about/",views.user_about,name="userabout"),
     path("service/",views.user_perms,name="userperms"),
     path("admin/login/",auth_views.LoginView.as_view(template_name="registration/login.html")),
-    # path("login/",auth_views.LoginView.as_view(template_name="registration/login.html"),name="login"),
+    path("login/",auth_views.LoginView.as_view(template_name="registration/login.html"),name="login"),
     path('admin/', admin.site.urls),
 ]
