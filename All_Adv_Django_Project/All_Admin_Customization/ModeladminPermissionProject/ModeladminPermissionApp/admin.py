@@ -1,11 +1,14 @@
 from django.contrib import admin
-from .models import Blog
+from .models import Blog,Book
+from django.contrib.auth.models import User
+from django.contrib.auth.models import Group
 # Register your models here.
 
 class BlogModelAdmin(admin.ModelAdmin):
     def has_delete_permission(self,request,obj=None):
-        print(obj)
-        return obj
+        if request.user.groups.filter(name="Editor").exists():
+            return True
+        return True
     def has_add_permission(self,request,obj=None):
         return True
     def has_view_permission(self,request,obj=None):
@@ -21,5 +24,8 @@ class BlogAdminArea(admin.AdminSite):
 blog_site=BlogAdminArea(name="BlogAdmin")
 
 blog_site.register(Blog,BlogModelAdmin)
+# blog_site.register(User)
+# blog_site.register(Group)
+blog_site.register(Book,BlogModelAdmin)
 
 admin.site.register(Blog)
