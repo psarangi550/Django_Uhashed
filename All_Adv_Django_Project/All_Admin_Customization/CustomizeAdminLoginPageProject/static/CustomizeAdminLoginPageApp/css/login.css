@@ -1,0 +1,64 @@
+/* LOGIN FORM */
+
+.login {
+    background:orangered;
+    height: auto;
+}
+
+.login #header {
+    background-color: green;
+    height: auto;
+    padding: 15px 16px;
+    justify-content: center;
+}
+
+.login #header h1 {
+    font-size: 20px;
+}
+
+.login #header h1 a {
+    color: yellow;
+}
+
+.login #content {
+    padding: 20px 20px 0;
+    color:red;
+    background:light;
+}
+
+.login #container {
+    background: var(--body-bg);
+    border: 1px groove var(--hairline-color);
+    border-radius: 14px;
+    overflow: hidden;
+    width: 28em;
+    min-width: 300px;
+    margin: 100px auto;
+    height: auto;
+}
+
+.login .form-row {
+    padding: 4px 0;
+}
+
+.login .form-row label {
+    display: block;
+    line-height: 3em;
+}
+
+.login .form-row #id_username, .login .form-row #id_password {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.login .submit-row {
+    padding: 1em 0 0 0;
+    margin: 0;
+    text-align: center;
+    /* background-color: blue; */
+}
+
+.login .password-reset-link {
+    text-align: center;
+}
